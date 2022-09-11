@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div className='container challengeLists'>
       <div className='my-5 position-relative'>
-        <h3 className='border-bottom border-info border-3'>Challenges</h3>
+        <h3 className='border-bottom border-info border-3'>Challenge</h3>
         <div className='position-absolute d-flex toolBox'>
           <div
             className='floatBtn shadow rounded-circle text-bg-info'
