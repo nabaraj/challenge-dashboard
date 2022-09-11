@@ -1,0 +1,33 @@
+@import '~bootstrap/scss/bootstrap.scss';
+.toolBox{
+  right: 0;
+  bottom: 0;
+    transform: translateY(50%);
+}
+.floatBtn{
+  top: 14px;
+  right: 10px;
+  text-align: center;
+  width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: $box-shadow;
+  @media (max-width: 600px) {
+    top:10px;
+  }
+i{line-height: 40px;}
+}
+.challengeLists{
+  
+  > .card{
+    box-shadow: $box-shadow-sm;
+    &:hover{
+      box-shadow: $box-shadow-lg;
+      z-index: 10;
+    }
+  }
+}
