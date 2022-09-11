@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { sortingChallenge } from "./utils";
-import App from "./App";
+import Home from "./pages/Home";
 
 test("test sortingChallenge", () => {
   const dummyData = [
