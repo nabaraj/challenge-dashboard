@@ -80,10 +80,10 @@ export default function AddChallenge({ show, hideModal, addChallenge }) {
                   onChange={updateFormData}
                 />
               </div>
-              <div class='mb-3'>
+              <div className='mb-3'>
                 <label htmlFor='floatingTextarea'>Description</label>
                 <textarea
-                  class='form-control'
+                  className='form-control'
                   placeholder='Add challenge details'
                   id='floatingTextarea'
                   name='description'
