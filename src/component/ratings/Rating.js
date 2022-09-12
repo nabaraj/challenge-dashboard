@@ -1,8 +1,11 @@
 import React from "react";
 import "./rating.scss";
 export default function Rating({ rating, addRemoveRating, id }) {
+  const ratingBg = rating > 0 ? "bg-info" : "bg-danger";
   return (
-    <div className='rating bg-info text-black position-absolute top-0 end-0 d-flex p-1 bg-opacity-50 shadow-sm'>
+    <div
+      className={`rating ${ratingBg} text-black position-absolute top-0 end-0 d-flex p-1 bg-opacity-50 shadow-sm`}
+    >
       <button
         className='btn btn-sm btn-outline-dark'
         onClick={() => addRemoveRating("up", id)}
