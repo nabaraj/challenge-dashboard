@@ -21,3 +21,14 @@ export const sortingChallenge = (challenges, sortingMethod) => {
     });
   }
 };
+export class localStorageUse {
+  static getItem(keyName) {
+    return JSON.parse(window.localStorage.getItem(keyName));
+  }
+  static setItem(keyName, value) {
+    return window.localStorage.setItem(keyName, JSON.stringify(value));
+  }
+  static clearStorage() {
+    return window.localStorage.clear();
+  }
+}

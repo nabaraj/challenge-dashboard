@@ -1,11 +1,10 @@
 import React, { createContext, useState } from "react";
-import { generate_token } from "./utils";
+import { generate_token, localStorageUse } from "./utils";
+
 export const ECDContext = createContext();
 
 function GlobalContext({ children }) {
-  const [listData, setListData] = useState(
-    JSON.parse(window.localStorage.getItem("data"))
-  );
+  const [listData, setListData] = useState(localStorageUse.getItem("data"));
   const [loggedIn, setLoggedInId] = useState("");
   const addChallenge = (challenge) => {
     let registered = Date.now();
@@ -18,7 +17,7 @@ function GlobalContext({ children }) {
 
     setListData((cList) => {
       let addedChallengeList = [...cList, challenge];
-      window.localStorage.setItem("data", JSON.stringify(addedChallengeList));
+      localStorageUse.setItem("data", addedChallengeList);
       return addedChallengeList;
     });
   };
@@ -32,7 +31,7 @@ function GlobalContext({ children }) {
             : listDataTemp[i].rating - 1;
       }
     }
-    window.localStorage.setItem("data", JSON.stringify(listDataTemp));
+    localStorageUse.setItem("data", listDataTemp);
     setListData(listDataTemp);
   };
   const isLoggedIn = () => {
